@@ -1,8 +1,7 @@
 [
-  { "label": "Home", "href": "/" },
-  { "label": "Services", "href": "#services" },
-  { "label": "About", "href": "#about" },
-  { "label": "Team", "href": "#team" },
-  { "label": "Insights", "href": "#insights" },
-  { "label": "Contact", "href": "#contact" }
+  { "label": "About us", "href": "/#about" },
+  { "label": "Process", "href": "/#process" },
+  { "label": "Project", "href": "/#projects" },
+  { "label": "Service", "href": "/#services" },
+  { "label": "Pricing", "href": "/#pricing" }
 ]

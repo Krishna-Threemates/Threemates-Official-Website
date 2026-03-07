@@ -3,11 +3,14 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowUpRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "framer-motion";
+import { Button } from "./ui/button";
+import { ModeToggle } from "./mode-toggle";
+import { Logo } from "./Logo";
 
-export function Navigation({ data }: { data: any }) {
+export function Navigation({ data: _data }: { data: any }) {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
@@ -20,62 +23,53 @@ export function Navigation({ data }: { data: any }) {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Close mobile menu on route change
     useEffect(() => {
         setIsOpen(false);
     }, [pathname]);
 
+    const links = [
+        { href: "/#about", label: "About us" },
+        { href: "/#process", label: "Process" },
+        { href: "/#project", label: "Project" },
+        { href: "/#service", label: "Service" },
+        { href: "/#pricing", label: "Pricing" },
+    ];
+
     return (
         <header
             className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-8",
-                scrolled ? "pt-4" : "pt-6 md:pt-8"
+                "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 md:px-8",
+                scrolled ? "pt-3 pb-3 bg-background/80 backdrop-blur-xl border-b shadow-soft" : "pt-6 md:pt-8"
             )}
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
-                {/* Logo */}
-                <Link href="/" className="text-3xl font-heading font-bold tracking-tight z-50">
-                    doop
-                </Link>
+                <Logo />
 
-                {/* Desktop Nav - Floating Pill */}
                 <nav className="hidden md:flex flex-1 justify-center pointer-events-none">
-                    <div className="pointer-events-auto flex items-center p-1.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md">
-                        {data?.links?.map((link: any) => {
-                            const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/');
-                            return (
-                                <Link
-                                    key={link.label}
-                                    href={link.href}
-                                    className={cn(
-                                        "text-sm font-medium transition-all px-5 py-2.5 rounded-full",
-                                        isActive
-                                            ? "bg-white text-black"
-                                            : "text-white/80 hover:text-white hover:bg-white/10"
-                                    )}
-                                >
-                                    {link.label}
-                                </Link>
-                            )
-                        })}
+                    <div className="pointer-events-auto flex items-center p-1.5 rounded-full border bg-background/50 backdrop-blur-xl shadow-soft">
+                        {links.map((link) => (
+                            <Link
+                                key={link.label}
+                                href={link.href}
+                                className={cn(
+                                    "text-sm font-medium transition-all duration-200 px-5 py-2 rounded-full",
+                                    "text-muted-foreground hover:text-foreground hover:bg-secondary/80"
+                                )}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
                     </div>
                 </nav>
 
-                {/* Right side CTA & Mobile Toggle */}
                 <div className="flex items-center gap-4 z-50">
-                    {data?.cta && (
-                        <Link
-                            href={data.cta.href}
-                            className="hidden md:flex items-center gap-2 px-6 py-3 bg-lime text-black rounded-full text-sm font-semibold hover:bg-lime-hover transition-all"
-                        >
-                            {data.cta.label}
-                            <ArrowUpRight size={18} />
-                        </Link>
-                    )}
+                    <ModeToggle />
+                    <Button className="hidden md:flex rounded-full px-6 btn-press shadow-medium hover:shadow-elevated glow-blue" size="lg">
+                        Book a call
+                    </Button>
 
-                    {/* Mobile Toggle */}
                     <button
-                        className="md:hidden p-2 text-white bg-white/10 rounded-full border border-white/10 backdrop-blur-sm"
+                        className="md:hidden p-2 text-foreground bg-secondary rounded-full border backdrop-blur-sm shadow-soft hover:shadow-medium transition-all duration-200"
                         onClick={() => setIsOpen(!isOpen)}
                         aria-label="Toggle menu"
                     >
@@ -84,40 +78,37 @@ export function Navigation({ data }: { data: any }) {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
             <AnimatePresence>
                 {isOpen && (
                     <motion.div
-                        initial={{ opacity: 0, y: -20, filter: "blur(10px)" }}
-                        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                        exit={{ opacity: 0, y: -20, filter: "blur(10px)" }}
-                        transition={{ duration: 0.2 }}
-                        className="absolute top-full left-4 right-4 mt-2 p-4 bg-[#111] border border-white/10 rounded-3xl shadow-2xl md:hidden overflow-hidden flex flex-col space-y-2 backdrop-blur-xl"
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -20 }}
+                        transition={{ duration: 0.3, ease: "easeOut" }}
+                        className="fixed inset-0 top-0 left-0 right-0 h-screen bg-background/95 backdrop-blur-xl z-40 flex flex-col pt-24 px-8"
                     >
-                        {data?.links?.map((link: any) => {
-                            const isActive = pathname === link.href || (pathname.startsWith(link.href) && link.href !== '/');
-                            return (
-                                <Link
+                        <div className="flex flex-col space-y-1">
+                            {links.map((link, i) => (
+                                <motion.div
                                     key={link.label}
-                                    href={link.href}
-                                    className={cn(
-                                        "text-lg font-medium px-4 py-3 rounded-2xl transition-colors",
-                                        isActive ? "bg-white border text-black" : "text-white/80 hover:bg-white/5"
-                                    )}
+                                    initial={{ opacity: 0, x: -20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: i * 0.05, duration: 0.3 }}
                                 >
-                                    {link.label}
-                                </Link>
-                            )
-                        })}
-                        {data?.cta && (
-                            <Link
-                                href={data.cta.href}
-                                className="mt-4 flex items-center justify-center gap-2 w-full px-6 py-4 bg-lime text-black rounded-full text-base font-semibold"
-                            >
-                                {data.cta.label}
-                                <ArrowUpRight size={20} />
-                            </Link>
-                        )}
+                                    <Link
+                                        href={link.href}
+                                        className="text-foreground text-xl font-medium border-b border-border/50 py-5 block hover:text-primary hover:translate-x-2 transition-all duration-200"
+                                    >
+                                        {link.label}
+                                    </Link>
+                                </motion.div>
+                            ))}
+                        </div>
+                        <div className="mt-8">
+                            <Button className="w-full rounded-full btn-press shadow-medium glow-blue" size="lg">
+                                Book a call
+                            </Button>
+                        </div>
                     </motion.div>
                 )}
             </AnimatePresence>

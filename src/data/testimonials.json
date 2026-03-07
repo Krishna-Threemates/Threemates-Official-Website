@@ -1,16 +1,33 @@
-[
-  {
-    "id": "t1",
-    "client": "Tesla Dynamics",
-    "content": "Threemates.tech delivered a solution that was not only modern but ahead of its time. Truly premium experience.",
-    "author": "Elon T.",
-    "role": "CEO"
-  },
-  {
-    "id": "t2",
-    "client": "Orbital Systems",
-    "content": "Infinite solutions is not just a tagline, it's their Reality. Best tech agency we've ever worked with.",
-    "author": "Dr. Aris V.",
-    "role": "Director of Innovation"
+{
+  "badge": "Testimonials",
+  "title": "What People Are Saying",
+  "description": "From SEO to paid ads, everything exceeded expectations. Their expertise gave us clarity, results, and a strong foundation for sustainable growth.",
+  "cards": [
+    {
+      "text": "We've worked with a few agencies before, but none as transparent and proactive. Their strategy gave us more clarity than we've had in...",
+      "name": "Eva Oris",
+      "avatar": "https://i.pravatar.cc/80?img=5"
+    },
+    {
+      "text": "From SEO to paid ads, everything exceeded expectations. Their expertise gave us clarity, results, and a strong foundation for sustainable growth.",
+      "name": "Luis Hernde",
+      "avatar": "https://i.pravatar.cc/80?img=12"
+    },
+    {
+      "text": "The team brought fresh ideas and flawless execution. Our brand visibility grew faster than expected, and customer engagement and reached record highs.",
+      "name": "Mara Jin",
+      "avatar": "https://i.pravatar.cc/80?img=20"
+    },
+    {
+      "text": "Working with this team has been a game-changer for our business. They genuinely cared. Our online revenue has doubled in just...",
+      "name": "Julius Lee",
+      "avatar": "https://i.pravatar.cc/80?img=33"
+    }
+  ],
+  "highlight": {
+    "text": "They brought our vision to life with incredible precision and creativity. The collaboration was seamless, and the final product truly elevated our digital presence.",
+    "name": "Sarah M",
+    "role": "CEO, Ecommerce",
+    "avatars": [11, 12, 13, 14]
   }
-]
+}

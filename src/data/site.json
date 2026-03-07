@@ -1,12 +1,17 @@
 {
-  "name": "DROOP",
-  "tagline": "Digital Design Agency",
-  "description": "Premium digital experiences for modern brands.",
-  "logo": "DROOP",
+  "name": "Threemates",
+  "tagline": "Global UI UX Design Agency",
+  "description": "Global UI UX design agency digital partner for startup.",
+  "logo": "THREEMATES",
   "contact": {
-    "email": "hello@droop.agency",
-    "phone": "+1 800 123 4567",
-    "address": "123 Creative Street"
+    "email": "hello@threemates.com",
+    "phone": "+1 (415) 555-0167",
+    "address": "San Francisco, CA"
   },
-  "socials": []
+  "socials": [
+    { "name": "Facebook", "href": "#" },
+    { "name": "LinkedIn", "href": "#" },
+    { "name": "Twitter", "href": "#" },
+    { "name": "Instagram", "href": "#" }
+  ]
 }

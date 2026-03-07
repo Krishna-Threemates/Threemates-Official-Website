@@ -1,112 +1,130 @@
 {
   "hero": {
-    "badge": "Digital Design Agency",
-    "headline": "A creative design agency tailored for your brand",
-    "description": "We specialize in crafting intuitive & premium digital experiences that help businesses grow and stand out in the modern digital landscape.",
-    "primaryCta": { "label": "Our Work", "href": "/work" },
-    "secondaryCta": { "label": "Start a Project", "href": "/contact" }
+    "badge": "20 founders booked a call this week",
+    "headline": "Global UI UX design agency digital Partner for startup",
+    "description": "We deliver globally UI, UX & web design smoothly, without delay, saving your time and money with an efficient process.",
+    "primaryCta": { "label": "Book a call", "href": "/contact" },
+    "secondaryCta": { "label": "View case studies", "href": "/work" },
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
   },
-  "clients": {
-    "title": "Trusted by innovative companies worldwide",
-    "logos": [
-      { "name": "Amazon", "src": "/logos/amazon.svg" },
-      { "name": "Spotify", "src": "/logos/spotify.svg" },
-      { "name": "Google", "src": "/logos/google.svg" },
-      { "name": "Webflow", "src": "/logos/webflow.svg" },
-      { "name": "Figma", "src": "/logos/figma.svg" }
+  "benefits": {
+    "badge": "Benefits",
+    "title": "We design brands & websites that move as fast as you do.",
+    "description": "After a deep dive into customer behavior and brand perception, we developed a fresh identity and rebuilt their online store with UX best practices",
+    "tags": ["Branding", "Logo", "Website", "Illustration", "Interface", "Strategy"],
+    "items": [
+      { "icon": "❖", "title": "Convert Focused", "description": "An expert team ready to tackle your challenges with innovative solutions and proven strategies." },
+      { "icon": "↗", "title": "Quick Launch Or Retainer", "description": "Scale your business effortlessly with our Agency, designed to grow alongside your evolving needs." },
+      { "icon": "✓", "title": "Real-Time Collaboration", "description": "Customize the platform to perfectly align with your business unique requirements and goals." },
+      { "icon": "✦", "title": "Complete Creative Solution", "description": "Maximize efficiency with integrated solutions that eliminate bottlenecks, saving time and costs." },
+      { "icon": "◈", "title": "Transparent Pricing", "description": "A simple and accessible interface for users of all skill levels, making it easy to find what you need." },
+      { "icon": "♥", "title": "Real Human Connection", "description": "A simple and accessible interface for users of all skill levels, making it easy to find what you need." }
     ]
   },
   "services": {
-    "badge": "Our Services",
-    "title": "Our expertise in driving impact",
+    "badge": "Services",
+    "title": "Our Services",
+    "description": "After a deep dive into customer behavior and brand perception, we developed a fresh identity and rebuilt their online store with UX best practices",
+    "items": [
+      { "title": "Branding", "description": "Strong identity, unique voice, and visuals built for growth.", "icon": "📐", "active": true },
+      { "title": "PR & marketing", "description": "Campaigns, strategy, and storytelling crafted to grow reach.", "icon": "📊" },
+      { "title": "Web & app design", "description": "Modern, functional, and user-focused design built for impact.", "icon": "🖥" },
+      { "title": "Font & Developer", "description": "Custom fonts, scalable code, and solutions tailored for you.", "icon": "⌨" }
+    ]
+  },
+  "mission": {
+    "text": "Guided by {strategy}, powered by {creativity}. We design-first solutions that make brands shine and {succeed} in the digital era.",
+    "reviews": [
+      { "rating": "4.9/5", "count": "270" },
+      { "rating": "4.8/5", "count": "170" }
+    ],
+    "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop"
+  },
+  "projects": {
+    "badge": "Projects",
+    "title": "Demand Design for Scaling Brands.",
+    "viewAllBtn": { "label": "View more projects", "href": "/work" },
     "items": [
       {
-        "title": "Brand Strategy",
-        "description": "We help you define your brand identity and position it effectively in the market.",
-        "icon": "Compass"
+        "title": "Detos Ecommerce",
+        "tags": ["Visual Identity", "Illustration", "E-commerce"],
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
       },
       {
-        "title": "UI/UX Design",
-        "description": "Crafting beautiful and intuitive user interfaces that engage and convert.",
-        "icon": "PenTool"
+        "title": "Hopstack",
+        "tags": ["Visual Identity", "E-commerce"],
+        "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
       },
       {
-        "title": "Web Development",
-        "description": "Building high-performance, scalable websites using modern technologies.",
-        "icon": "Code"
+        "title": "Mahajin",
+        "tags": ["Visual Identity", "E-commerce"],
+        "image": "https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=800&auto=format&fit=crop"
       },
       {
-        "title": "App Design",
-        "description": "Designing seamless mobile experiences for iOS and Android.",
-        "icon": "Smartphone"
+        "title": "Applo SaaS",
+        "tags": ["Visual Identity", "Illustration", "E-commerce"],
+        "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop"
       }
-    ]
+    ],
+    "ctaCard": {
+      "title": "For more details",
+      "description": "Design, strategy, and code built around what your business actually needs.",
+      "buttonLabel": "Book a call"
+    }
   },
-  "featuredWork": {
-    "badge": "Our Portfolio",
-    "title": "Selected Projects",
-    "viewAllBtn": { "label": "View All Work", "href": "/work" },
-    "projects": [
-      {
-        "title": "Healthify App",
-        "category": "UI/UX Design",
-        "image": "/projects/healthify.jpg",
-        "slug": "healthify"
-      },
-      {
-        "title": "Neo Bank Dashboard",
-        "category": "Web Application",
-        "image": "/projects/neo-bank.jpg",
-        "slug": "neo-bank"
-      },
-      {
-        "title": "Crypto Wallet UX",
-        "category": "Mobile App",
-        "image": "/projects/crypto.jpg",
-        "slug": "crypto-wallet"
-      }
-    ]
+  "about": {
+    "avatar": "https://i.pravatar.cc/80?img=43",
+    "label": "Doubt more about us & clear",
+    "text": "We're not just designers or developers - we're storytellers, problem-solvers, and brand builders.",
+    "highlight": "Blending bold creativity with strategy, we craft experiences that connect, convert, and stand out in a crowded digital world.",
+    "buttonLabel": "Book a call"
   },
-  "process": {
-    "badge": "How we work",
-    "title": "We bring modern design to life",
-    "steps": [
-      {
-        "number": "01",
-        "title": "Discovery & Research",
-        "description": "Understanding your goals, audience, and market landscape."
-      },
-      {
-        "number": "02",
-        "title": "Strategy & Planning",
-        "description": "Defining the roadmap and establishing a clear creative direction."
-      },
-      {
-        "number": "03",
-        "title": "Design & Prototyping",
-        "description": "Crafting visual concepts and interactive prototypes for validation."
-      },
-      {
-        "number": "04",
-        "title": "Development & Launch",
-        "description": "Bringing the design to life with clean, scalable code."
-      }
-    ]
+  "pricing": {
+    "badge": "No hidden fees",
+    "title": "Clear pricing, clear results",
+    "plan": {
+      "name": "Design & Dev support plan",
+      "description": "Ideal for brands needing ongoing design and dev support.",
+      "price": "$1200",
+      "period": "/month",
+      "features": [
+        "Ongoing design support",
+        "Framer or custom development",
+        "Clear timelines & milestones",
+        "Flexible monthly scope",
+        "Weekly updates from the project manager",
+        "Fast turnaround on key tasks"
+      ]
+    },
+    "scheduleCard": {
+      "avatar": "https://i.pravatar.cc/80?img=47",
+      "spotsAvailable": 3,
+      "title": "Schedule a call",
+      "description": "Ideal for brands needing ongoing design and dev support."
+    },
+    "reviewCard": {
+      "name": "Sarah M",
+      "avatar": "https://i.pravatar.cc/80?img=5",
+      "rating": 5.0,
+      "text": "Ideal for brands needing ongoing design and dev support."
+    }
   },
-  "testimonials": {
-    "title": "What our clients say",
-    "reviews": [
+  "blog": {
+    "badge": "Blog",
+    "title": "Explore our latest journal",
+    "viewAllBtn": { "label": "View more projects", "href": "/blog" },
+    "posts": [
       {
-        "text": "DROOP transformed our digital presence completely. Their attention to detail and creative approach is unmatched.",
-        "author": "Sarah Jenkins",
-        "role": "CMO at TechFlow",
-        "avatar": "/avatars/sarah.jpg"
+        "title": "They brought our vision to life with incredible.",
+        "date": "Jul 8, 2025",
+        "readTime": "2 min read",
+        "image": "https://images.unsplash.com/photo-1616423641401-8208f014777e?q=80&w=800&auto=format&fit=crop"
       },
       {
-        "text": "Working with this team was an absolute pleasure. They delivered beyond our expectations and on time.",
-        "author": "Mark Davidson",
-        "role": "Founder of Nova",
-        "avatar": "/avatars/mark.jpg"
+        "title": "They brought our vision to life with incredible.",
+        "date": "Jul 8, 2025",
+        "readTime": "2 min read",
+        "image": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=800&auto=format&fit=crop"
       }
     ]
   }

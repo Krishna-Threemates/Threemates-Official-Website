@@ -1,14 +1,26 @@
 [
   {
-    "question": "What does 'Infinite Solutions' mean?",
-    "answer": "It represents our commitment to solving any technical challenge, no matter the scale or complexity, with creativity and precision."
+    "question": "What services does your digital marketing agency offer?",
+    "answer": "We provide a full range of services including SEO, PPC advertising, social media marketing, content creation, email marketing, website optimization."
   },
   {
-    "question": "How do we start a project with you?",
-    "answer": "Simple. Book a strategy session through our contact form, and we'll dive into your vision."
+    "question": "What kind of design services do you offer?",
+    "answer": "We focus on UI/UX design, web design, mobile app design, and brand identity."
   },
   {
-    "question": "Do you work with startups?",
-    "answer": "Yes, we love working with founders who want to build the future."
+    "question": "Do you offer fixed packages or custom quotes?",
+    "answer": "We offer both depending on the scope of your work. Most large projects are custom quoted."
+  },
+  {
+    "question": "Is ongoing maintenance included in your pricing?",
+    "answer": "Maintenance plans are available as an add-on or as part of our retainer packages."
+  },
+  {
+    "question": "Can you help with SEO or digital marketing too?",
+    "answer": "Yes, we partner with top experts to ensure your final product is not only beautiful but ranks well."
+  },
+  {
+    "question": "Will my website be optimized for mobile and speed?",
+    "answer": "Absolutely. All our websites are built mobile-first and optimized for maximum performance."
   }
 ]

@@ -1,26 +1,25 @@
-[
-  {
-    "id": "discovery",
-    "step": "01",
-    "title": "Discovery & Strategy",
-    "description": "We dive deep into your business goals to define the infinite path for your digital success."
-  },
-  {
-    "id": "design",
-    "step": "02",
-    "title": "Creative Design",
-    "description": "Translating vision into bold, modern interfaces that wow users at first glance."
-  },
-  {
-    "id": "development",
-    "step": "03",
-    "title": "Agile Development",
-    "description": "Rapid prototyping and building with the most advanced coding standards."
-  },
-  {
-    "id": "launch",
-    "step": "04",
-    "title": "Infinite Growth",
-    "description": "Deployment and continuous optimization for long-term scalability."
-  }
-]
+{
+  "badge": "Process",
+  "title": "Our starting style",
+  "description": "After a deep dive into customer behavior and brand perception, we developed a fresh identity and rebuilt their online store with UX best practices.",
+  "steps": [
+    {
+      "step": "01",
+      "title": "Discover & Strategize",
+      "description": "We understand your goals and craft a clear.",
+      "color": "bg-pink-50 dark:bg-pink-950/30"
+    },
+    {
+      "step": "02",
+      "title": "Design & Build",
+      "description": "We turn strategy into reality with design and tech built for your brand.",
+      "color": "bg-cyan-50 dark:bg-cyan-950/30"
+    },
+    {
+      "step": "03",
+      "title": "Launch & Grow",
+      "description": "Confident launch, continuous updates, and growth-focused support.",
+      "color": "bg-blue-50 dark:bg-blue-950/30"
+    }
+  ]
+}
