@@ -4,6 +4,11 @@ import "./globals.css";
 import { getGlobalData, getSiteData } from "@/lib/data-loader";
 import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const site = await getSiteData().catch(() => ({ name: "doop", description: "" }));
@@ -24,7 +29,7 @@ export default async function RootLayout({
   const globalData = await getGlobalData().catch(() => null);
 
   return (
-    <html lang="en">
+    <html lang="en" className={cn("font-sans", geist.variable)}>
       <body className="antialiased min-h-screen flex flex-col">
         {globalData && <Navigation data={globalData.navigation} />}
         <main className="flex-grow">
