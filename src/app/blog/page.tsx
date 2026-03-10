@@ -1,8 +1,28 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getBlogData } from "@/lib/data-loader";
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  description:
+    "Articles, guides, and industry insights from the Threemates team — covering ERP, SaaS, web development, mobile apps, and technology trends.",
+  alternates: { canonical: "/blog" },
+  openGraph: {
+    title: "Blog — Threemates Insights & Tech Updates",
+    description:
+      "Read the latest articles on ERP, SaaS, web development, and technology trends from the Threemates team.",
+    url: "/blog",
+    type: "website",
+  },
+  twitter: {
+    title: "Blog — Threemates Insights & Tech Updates",
+    description:
+      "Read the latest articles on ERP, SaaS, web development, and technology trends from the Threemates team.",
+  },
+};
 
 export default async function Blog() {
     const data = await getBlogData();

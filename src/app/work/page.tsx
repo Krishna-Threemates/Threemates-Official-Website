@@ -1,7 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import { getWorkData } from "@/lib/data-loader";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Our Work",
+  description:
+    "Explore software platforms and digital solutions built by Threemates — School ERP, College ERP, Hospital Management, SaaS platforms, and more.",
+  alternates: { canonical: "/work" },
+  openGraph: {
+    title: "Our Work — Threemates Portfolio",
+    description:
+      "See the ERP systems, SaaS platforms, and web applications we have built for businesses and institutions.",
+    url: "/work",
+    type: "website",
+  },
+  twitter: {
+    title: "Our Work — Threemates Portfolio",
+    description:
+      "See the ERP systems, SaaS platforms, and web applications we have built for businesses and institutions.",
+  },
+};
 
 export default async function Work() {
     const data = await getWorkData();

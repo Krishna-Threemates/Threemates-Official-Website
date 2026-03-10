@@ -73,12 +73,14 @@
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
   }
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 }
 

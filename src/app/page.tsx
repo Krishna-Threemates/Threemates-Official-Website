@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -8,6 +9,25 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+
+export const metadata: Metadata = {
+  title: "Threemates — Modern IT Solutions & Software Development",
+  description:
+    "Threemates builds ERP systems, SaaS platforms, web & mobile applications that help businesses digitize operations and scale efficiently. Based in Bhubaneswar, India.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    title: "Threemates — Modern IT Solutions & Software Development",
+    description:
+      "We build ERP systems, SaaS platforms, web & mobile apps for modern businesses.",
+    url: "/",
+    type: "website",
+  },
+  twitter: {
+    title: "Threemates — Modern IT Solutions & Software Development",
+    description:
+      "We build ERP systems, SaaS platforms, web & mobile apps for modern businesses.",
+  },
+};
 import {
   Accordion,
   AccordionContent,

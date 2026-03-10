@@ -1,0 +1,26 @@
+{
+  "name": "Threemates",
+  "short_name": "Threemates",
+  "description": "Modern IT Solutions & Software Development — ERP systems, SaaS platforms, web & mobile applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "sizes": "124x124",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/darkIcon.png",
+      "sizes": "384x384",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "technology", "productivity"],
+  "lang": "en",
+  "dir": "ltr"
+}

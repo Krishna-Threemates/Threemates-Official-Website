@@ -1,9 +1,30 @@
+import type { Metadata } from "next";
 import { getAboutData } from "@/lib/data-loader";
 import { Sparkles, Shield, Zap, Code2, Users, BarChart3, Repeat } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 
+export const metadata: Metadata = {
+  title: "About Us",
+  description:
+    "Learn about Threemates — a software development company based in Bhubaneswar, specializing in ERP systems, SaaS platforms, web applications, and mobile solutions.",
+  alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About Threemates — Who We Are",
+    description:
+      "Threemates is a technology company providing modern IT services. 50+ projects delivered, 20+ organizations served.",
+    url: "/about",
+    type: "website",
+  },
+  twitter: {
+    title: "About Threemates — Who We Are",
+    description:
+      "Threemates is a technology company providing modern IT services. 50+ projects delivered, 20+ organizations served.",
+  },
+};
+
 export default async function About() {
+    
     const data = await getAboutData();
 
     return (

@@ -1,7 +1,27 @@
+import type { Metadata } from "next";
 import { getServicesData } from "@/lib/data-loader";
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "Explore Threemates services — ERP Development, Web Application Development, Mobile App Development, SaaS Development, and Cloud Solutions.",
+  alternates: { canonical: "/services" },
+  openGraph: {
+    title: "Our Services — Threemates",
+    description:
+      "End-to-end IT services: ERP systems, web apps, mobile apps, SaaS platforms, and cloud solutions.",
+    url: "/services",
+    type: "website",
+  },
+  twitter: {
+    title: "Our Services — Threemates",
+    description:
+      "End-to-end IT services: ERP systems, web apps, mobile apps, SaaS platforms, and cloud solutions.",
+  },
+};
 
 export default async function Services() {
     const data = await getServicesData();

@@ -22,7 +22,7 @@ export function Navigation({ data: _data }: { data: any }) {
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
-
+    
     useEffect(() => {
         setIsOpen(false);
     }, [pathname]);
@@ -42,7 +42,7 @@ export function Navigation({ data: _data }: { data: any }) {
     const links = [
         { href: "/about", label: "About us" },
         { href: "/services", label: "Services" },
-        { href: "/work", label: "Projects" },
+        { href: "/work", label: "Products" },
         { href: "/blog", label: "Blog" },
         { href: "/contact", label: "Contact" },
     ];
@@ -51,8 +51,8 @@ export function Navigation({ data: _data }: { data: any }) {
         <>
             <header
                 className={cn(
-                    "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-4 md:px-8",
-                    scrolled ? "pt-2 pb-2" : "pt-4 md:pt-6"
+                    "fixed top-0 left-0 right-0 z-50 transition-all duration-500 px-3 sm:px-4 md:px-8",
+                    scrolled ? "pt-1.5 pb-1.5 md:pt-2 md:pb-2" : "pt-3 md:pt-6"
                 )}
             >
                 <div className="max-w-7xl mx-auto grid grid-cols-[auto_1fr_auto] items-center">
@@ -78,7 +78,9 @@ export function Navigation({ data: _data }: { data: any }) {
                     </nav>
 
                     <div className="flex items-center gap-3">
-                        <ModeToggle />
+                        <div className="hidden md:block">
+                            <ModeToggle />
+                        </div>
                         <Link href="/contact" className="hidden md:flex">
                             <Button className="rounded-full px-6 bg-blue-600 hover:bg-blue-700 text-white" size="sm">
                                 Start a Project
@@ -91,11 +93,11 @@ export function Navigation({ data: _data }: { data: any }) {
             {/* Mobile menu toggle - rendered outside header to avoid stacking context issues */}
             <button
                 className={cn(
-                    "md:hidden fixed top-5 right-4 p-2.5 rounded-full border backdrop-blur-sm transition-all duration-200 z-[1000]",
+                    "md:hidden fixed right-4 p-2.5 rounded-full border backdrop-blur-sm transition-all duration-200 z-[1000]",
                     isOpen
-                        ? "bg-white text-black shadow-lg"
+                        ? "bg-white text-black shadow-lg top-4"
                         : "bg-secondary text-foreground shadow-soft hover:shadow-medium",
-                    scrolled && !isOpen && "top-3"
+                    scrolled && !isOpen ? "top-2.5" : !isOpen && "top-4"
                 )}
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
@@ -111,7 +113,7 @@ export function Navigation({ data: _data }: { data: any }) {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="fixed inset-0 z-[999] bg-background flex flex-col pt-28 px-8 md:hidden"
+                        className="fixed inset-0 z-[999] bg-background flex flex-col pt-20 px-6 sm:px-8 md:hidden"
                     >
                         <div className="flex flex-col space-y-1">
                             {links.map((link, i) => (
@@ -136,15 +138,16 @@ export function Navigation({ data: _data }: { data: any }) {
                                 </motion.div>
                             ))}
                         </div>
-                        <div className="mt-auto pb-12 space-y-4">
-                            <Link href="/contact" className="w-full">
+                        <div className="mt-auto pb-12 space-y-5">
+                            <div className="flex items-center justify-between px-1">
+                                <span className="text-sm text-muted-foreground font-medium">Appearance</span>
+                                <ModeToggle />
+                            </div>
+                            <Link href="/contact" className="w-full block">
                                 <Button className="w-full rounded-full btn-press shadow-medium glow-blue" size="lg">
                                     Start a Project
                                 </Button>
                             </Link>
-                            <div className="flex justify-center">
-                                <ModeToggle />
-                            </div>
                         </div>
                     </motion.div>
                 )}
