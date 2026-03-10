@@ -64,8 +64,8 @@ module.exports = {
             fontFamily: {
                 sans: ['var(--font-sans)', 'Fira Code', 'Cascadia Code', 'Consolas', 'monospace'],
                 mono: ['var(--font-sans)', 'Fira Code', 'Cascadia Code', 'Consolas', 'monospace'],
-                display: ['var(--font-display)', 'Anton', 'Impact', 'sans-serif'],
-                inter: ['var(--font-inter)', 'Inter', 'system-ui', 'sans-serif'],
+                display: ['var(--font-display)', 'Geist', 'Impact', 'sans-serif'],
+                inter: ['var(--font-inter)', 'Geist', 'system-ui', 'sans-serif'],
             },
             keyframes: {
                 "accordion-down": {

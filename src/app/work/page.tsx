@@ -73,7 +73,7 @@ export default async function Work() {
                     <div className="grid md:grid-cols-2 gap-x-8 gap-y-16 md:gap-y-20">
                         {data.projects.map((project: any, index: number) => (
                             <Link
-                                href={project.link}
+                                href={`/work/${project.slug}`}
                                 key={project.id}
                                 className={`group block ${index % 2 !== 0 ? 'md:mt-20' : ''}`}
                             >
@@ -82,6 +82,8 @@ export default async function Work() {
                                         src={project.image}
                                         alt={project.title}
                                         fill
+                                        quality={80}
+                                        loading={index < 2 ? "eager" : "lazy"}
                                         className="object-cover group-hover:scale-105 transition-transform duration-700"
                                         sizes="(max-width: 768px) 100vw, 50vw"
                                     />

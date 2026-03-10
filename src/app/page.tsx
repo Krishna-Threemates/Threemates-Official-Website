@@ -106,8 +106,9 @@ export default async function Home() {
                   src={home.hero.image}
                   alt="Threemates Technology Ecosystem — ERP, SaaS, Web & Mobile Development"
                   fill
+                  quality={85}
                   className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
-                  sizes="(max-width: 768px) 100vw, 80vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/40 via-transparent to-transparent" />
@@ -273,10 +274,12 @@ export default async function Home() {
         <div className="mt-12 md:mt-16 max-w-2xl mx-auto rounded-3xl overflow-hidden aspect-[4/3] relative shadow-elevated group">
           <Image
             src={home.mission.image}
-            alt="Team"
+            alt="Threemates team at work"
             fill
+            quality={80}
+            loading="lazy"
             className="object-cover img-zoom"
-            sizes="(max-width: 768px) 100vw, 50vw"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 60vw, 672px"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         </div>
@@ -315,7 +318,7 @@ export default async function Home() {
                   ))}
                 </div>
                 <div className="rounded-2xl overflow-hidden aspect-[4/3] relative bg-gray-900">
-                  <Image src={home.projects.items[0].image} alt={home.projects.items[0].title} fill className="object-cover img-zoom" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <Image src={home.projects.items[0].image} alt={home.projects.items[0].title} fill quality={80} loading="lazy" className="object-cover img-zoom" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px" />
                 </div>
               </CardContent>
             </Card>
@@ -349,7 +352,7 @@ export default async function Home() {
                     ))}
                   </div>
                   <div className={`rounded-2xl overflow-hidden ${i === home.projects.items.length - 2 ? "aspect-[4/3]" : "aspect-[3/2]"} relative bg-gray-900`}>
-                    <Image src={project.image} alt={project.title} fill className="object-cover img-zoom" sizes="(max-width: 768px) 100vw, 50vw" />
+                    <Image src={project.image} alt={project.title} fill quality={80} loading="lazy" className="object-cover img-zoom" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px" />
                   </div>
                 </CardContent>
               </Card>
@@ -620,8 +623,10 @@ export default async function Home() {
                   src={blog.image}
                   alt={blog.title}
                   fill
+                  quality={80}
+                  loading="lazy"
                   className="object-cover img-zoom"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 560px"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>

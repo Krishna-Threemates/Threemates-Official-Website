@@ -90,11 +90,12 @@ export function Footer({ data }: { data: any }) {
                 </div>
             </div>
 
-            {/* Giant 3D brand text — bottom, clipped to prevent overflow */}
-            <div className="relative w-full overflow-hidden pointer-events-none select-none">
-                <div className="flex justify-end pr-4 md:pr-12 lg:pr-20 pb-4 md:pb-6">
+            {/* Giant 3D brand text */}
+            <div className="relative w-full pointer-events-none select-none pt-8 md:pt-12" aria-hidden="true">
+                <div className="flex justify-center px-4">
                     <h1
-                        className="font-display text-[18vw] md:text-[14vw] leading-[0.85] tracking-tighter uppercase text-shadow-brand text-right"
+                        className="font-display font-black text-[16vw] md:text-[12vw] leading-none tracking-[-0.03em] uppercase text-shadow-brand-3d text-center whitespace-nowrap pb-6 md:pb-10"
+                        style={{ transform: 'scaleX(0.65) scaleY(1.3)' }}
                     >
                         THREEMATES
                     </h1>

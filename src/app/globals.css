@@ -152,7 +152,7 @@
                 0 16px 48px -8px rgba(0, 0, 0, 0.4);
   }
 
-  /* Footer brand text – 3D depth effect with glow */
+  /* Footer brand text – flat gradient style */
   .text-shadow-brand {
     background: linear-gradient(180deg, #2563eb 0%, #3b82f6 35%, #1d4ed8 65%, #1e3a8a 100%);
     -webkit-background-clip: text;
@@ -174,8 +174,54 @@
             drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.5));
   }
 
+  /* Footer brand text – 3D extruded depth effect */
+  .text-shadow-brand-3d {
+    color: #2563eb;
+    text-shadow:
+      0 1px 0 #1d4ed8,
+      0 2px 0 #1c4ac8,
+      0 3px 0 #1b46b8,
+      0 4px 0 #1a42a8,
+      0 5px 0 #193e98,
+      0 6px 0 #183a88,
+      0 7px 0 #173678,
+      0 8px 0 #163268,
+      0 9px 0 #152e58,
+      0 10px 0 #142a48,
+      0 11px 0 #132638,
+      0 12px 0 #122228,
+      0 0 20px rgba(37, 99, 235, 0.4),
+      0 0 60px rgba(37, 99, 235, 0.2),
+      0 20px 40px rgba(0, 0, 0, 0.4);
+  }
+  .dark .text-shadow-brand-3d {
+    color: #3b82f6;
+    text-shadow:
+      0 1px 0 #2563eb,
+      0 2px 0 #2460e0,
+      0 3px 0 #225ad5,
+      0 4px 0 #2155ca,
+      0 5px 0 #1f4fbf,
+      0 6px 0 #1e4ab5,
+      0 7px 0 #1c44aa,
+      0 8px 0 #1b3fa0,
+      0 9px 0 #193995,
+      0 10px 0 #18348b,
+      0 11px 0 #162e80,
+      0 12px 0 #152976,
+      0 0 30px rgba(59, 130, 246, 0.5),
+      0 0 80px rgba(59, 130, 246, 0.25),
+      0 25px 50px rgba(0, 0, 0, 0.5);
+  }
+
   /* Focus ring for accessibility */
   .focus-ring {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background;
   }
+}
+
+/* ─── Shimmer animation for image loader ─── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }

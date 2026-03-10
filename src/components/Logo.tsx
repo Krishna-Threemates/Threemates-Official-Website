@@ -24,6 +24,7 @@ export function Logo({ className, forceLight, forceDark, size = "lg" }: { classN
           alt="Threemates"
           width={400}
           height={100}
+          quality={90}
           className={cn("w-full h-full object-contain", imgScale)}
           priority
         />
@@ -40,6 +41,7 @@ export function Logo({ className, forceLight, forceDark, size = "lg" }: { classN
           alt="Threemates"
           width={400}
           height={100}
+          quality={90}
           className={cn("w-full h-full object-contain", imgScale)}
           priority
         />

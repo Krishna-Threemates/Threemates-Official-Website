@@ -54,6 +54,7 @@ export default async function Blog() {
                                 src={data.featured.image}
                                 alt={data.featured.title}
                                 fill
+                                quality={85}
                                 className="object-cover group-hover:scale-105 transition-transform duration-700"
                                 sizes="(max-width: 1280px) 100vw, 1200px"
                                 priority
@@ -99,6 +100,8 @@ export default async function Blog() {
                                         src={post.image}
                                         alt={post.title}
                                         fill
+                                        quality={80}
+                                        loading="lazy"
                                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                                         sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                                     />

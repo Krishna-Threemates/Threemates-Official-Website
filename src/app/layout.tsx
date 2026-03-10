@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code, Anton } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,9 +8,27 @@ import { Footer } from "@/components/Footer";
 import { Loader } from "@/components/Loader";
 import { getGlobalData } from "@/lib/data-loader";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const firaCode = Fira_Code({ subsets: ["latin"], variable: "--font-sans" });
-const anton = Anton({ weight: "400", subsets: ["latin"], variable: "--font-display" });
+const geistSans = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-inter",
+  display: "swap",
+});
+const firaCode = localFont({
+  src: [
+    { path: "./fonts/FiraCode-Light.woff2", weight: "300", style: "normal" },
+    { path: "./fonts/FiraCode-Regular.woff2", weight: "400", style: "normal" },
+    { path: "./fonts/FiraCode-Medium.woff2", weight: "500", style: "normal" },
+    { path: "./fonts/FiraCode-SemiBold.woff2", weight: "600", style: "normal" },
+    { path: "./fonts/FiraCode-Bold.woff2", weight: "700", style: "normal" },
+  ],
+  variable: "--font-sans",
+  display: "swap",
+});
+const geistDisplay = localFont({
+  src: "./fonts/GeistVF.woff",
+  variable: "--font-display",
+  display: "swap",
+});
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://threemates.tech";
 
@@ -109,7 +127,7 @@ export default async function RootLayout({
 }>) {
   const global = await getGlobalData();
   return (
-    <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable, firaCode.variable, anton.variable)}>
+    <html lang="en" suppressHydrationWarning className={cn("font-sans", geistSans.variable, firaCode.variable, geistDisplay.variable)}>
       <head>
         {/* JSON-LD Structured Data — Organization */}
         <script

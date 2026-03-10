@@ -84,6 +84,8 @@ export default async function Services() {
                                     src={service.image}
                                     alt={service.title}
                                     fill
+                                    quality={80}
+                                    loading={index === 0 ? "eager" : "lazy"}
                                     className="object-cover"
                                     sizes="(max-width: 1024px) 100vw, 50vw"
                                 />

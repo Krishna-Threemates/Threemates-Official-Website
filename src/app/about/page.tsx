@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default async function About() {
-    
+
     const data = await getAboutData();
 
     return (
@@ -51,6 +51,7 @@ export default async function About() {
                         src={data.hero.image}
                         alt="Threemates Team"
                         fill
+                        quality={85}
                         className="object-cover"
                         sizes="(max-width: 1280px) 100vw, 1200px"
                         priority
@@ -92,6 +93,8 @@ export default async function About() {
                                     src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop"
                                     alt="Our Office"
                                     fill
+                                    quality={80}
+                                    loading="lazy"
                                     className="object-cover"
                                     sizes="(max-width: 768px) 100vw, 50vw"
                                 />
@@ -111,6 +114,8 @@ export default async function About() {
                                 src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=800&auto=format&fit=crop"
                                 alt="Our Mission"
                                 fill
+                                quality={80}
+                                loading="lazy"
                                 className="object-cover"
                                 sizes="(max-width: 768px) 100vw, 50vw"
                             />

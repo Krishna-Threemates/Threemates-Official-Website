@@ -54,6 +54,7 @@ export function Loader() {
                   src="/assets/darkIcon.png"
                   alt="Loading"
                   fill
+                  sizes="100px"
                   className="object-contain"
                   priority
                 />
@@ -64,6 +65,7 @@ export function Loader() {
                   src="/assets/icon.png"
                   alt="Loading"
                   fill
+                  sizes="100px"
                   className="object-contain"
                   priority
                 />
