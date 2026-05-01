@@ -62,10 +62,9 @@ module.exports = {
                 sm: "calc(var(--radius) - 4px)",
             },
             fontFamily: {
-                sans: ['var(--font-sans)', 'Fira Code', 'Cascadia Code', 'Consolas', 'monospace'],
-                mono: ['var(--font-sans)', 'Fira Code', 'Cascadia Code', 'Consolas', 'monospace'],
-                display: ['var(--font-display)', 'Geist', 'Impact', 'sans-serif'],
-                inter: ['var(--font-inter)', 'Geist', 'system-ui', 'sans-serif'],
+                sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
+                mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', 'monospace'],
+                display: ['var(--font-display)', 'Plus Jakarta Sans', 'sans-serif'],
             },
             keyframes: {
                 "accordion-down": {

@@ -3,6 +3,8 @@ import { getServicesData } from "@/lib/data-loader";
 import { Sparkles } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
+import Link from "next/link";
+import { Card, CardContent } from "@/components/ui/card";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -93,6 +95,46 @@ export default async function Services() {
                             </div>
                         </div>
                     ))}
+                </div>
+            </section>
+
+            {/* AI Training & Skill Development */}
+            <section className="py-20 md:py-32 px-4 md:px-8 bg-blue-50/50 dark:bg-blue-950/10">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-12">
+                        <Badge variant="outline" className="rounded-full mb-4 shadow-soft">Skill Development</Badge>
+                        <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Empowering Teams with AI Skills</h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+                            We also provide AI training programs for organizations and educational institutions. Help your team stay ahead with the latest technologies.
+                        </p>
+                    </div>
+
+                    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-10">
+                        {[
+                            { title: "AI & ML", icon: "🤖" },
+                            { title: "LLMs & GenAI", icon: "✨" },
+                            { title: "Data Science", icon: "📊" },
+                            { title: "Cloud & MLOps", icon: "☁️" },
+                        ].map((program, i) => (
+                            <Card key={i} className="border shadow-soft card-hover rounded-2xl overflow-hidden">
+                                <CardContent className="p-5 text-center">
+                                    <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 flex items-center justify-center mx-auto mb-3 text-2xl">
+                                        {program.icon}
+                                    </div>
+                                    <h3 className="font-semibold">{program.title}</h3>
+                                </CardContent>
+                            </Card>
+                        ))}
+                    </div>
+
+                    <div className="text-center">
+                        <Link
+                            href="/ai-training"
+                            className="btn-press inline-flex items-center justify-center rounded-full bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-8 h-12 transition-all shadow-medium hover:shadow-elevated glow-blue"
+                        >
+                            Explore AI Training Programs
+                        </Link>
+                    </div>
                 </div>
             </section>
         </div>

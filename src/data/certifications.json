@@ -1,0 +1,49 @@
+{
+  "badge": "Certifications & Partnerships",
+  "title": "Trusted by Industry Leaders",
+  "description": "We maintain partnerships and certifications with leading technology companies to deliver world-class solutions.",
+  "partners": [
+    {
+      "name": "Microsoft",
+      "description": "Official Microsoft Partner",
+      "benefits": [
+        "Azure Cloud Solutions",
+        "Microsoft 365 Integration",
+        "Power Platform Development",
+        "Dynamics 365 ERP",
+        "Visual Studio Enterprise"
+      ],
+      "logoLight": "/assets/microsoft-logo.svg",
+      "logoDark": "/assets/microsoft-logo.svg",
+      "url": "https://www.microsoft.com"
+    },
+    {
+      "name": "Claude AI",
+      "description": "AI Integration Partner - Anthropic",
+      "benefits": [
+        "Enterprise AI Solutions",
+        "Custom LLM Integration",
+        "AI-Powered Development",
+        "Claude API Access",
+        "Advanced Language Models"
+      ],
+      "logoLight": "/assets/claude-logo.svg",
+      "logoDark": "/assets/claude-logo.svg",
+      "url": "https://www.anthropic.com"
+    }
+  ],
+  "certifications": [
+    {
+      "title": "ISO 27001 Certified",
+      "description": "Information Security Management"
+    },
+    {
+      "title": "AWS Partner",
+      "description": "Cloud Infrastructure Solutions"
+    },
+    {
+      "title": "Google Cloud Partner",
+      "description": "Cloud Platform Services"
+    }
+  ]
+}

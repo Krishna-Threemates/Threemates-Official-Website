@@ -43,6 +43,7 @@ export function Navigation({ data: _data }: { data: any }) {
         { href: "/about", label: "About us" },
         { href: "/services", label: "Services" },
         { href: "/work", label: "Products" },
+        { href: "/ai-training", label: "AI Training" },
         { href: "/blog", label: "Blog" },
         { href: "/contact", label: "Contact" },
     ];

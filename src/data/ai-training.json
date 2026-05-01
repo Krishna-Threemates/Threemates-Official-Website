@@ -1,0 +1,58 @@
+{
+  "badge": "Skill Development",
+  "title": "Empowering the Next Generation with AI Skills",
+  "description": "We reach out to educational institutions and organizations to provide skill training on the latest AI technologies, enabling students and professionals to stay ahead in the rapidly evolving tech landscape.",
+  "programs": [
+    {
+      "title": "AI & Machine Learning",
+      "description": "Comprehensive training on AI fundamentals, machine learning algorithms, deep learning, and real-world applications.",
+      "icon": "🤖",
+      "topics": ["Neural Networks", "Computer Vision", "NLP", "MLOps", "LLMs"],
+      "duration": "12 weeks"
+    },
+    {
+      "title": "Generative AI & LLMs",
+      "description": "Hands-on training with Large Language Models, prompt engineering, RAG systems, and AI agents.",
+      "icon": "✨",
+      "topics": ["Prompt Engineering", "LangChain", "Vector Databases", "AI Agents", "Fine-tuning"],
+      "duration": "8 weeks"
+    },
+    {
+      "title": "Data Science & Analytics",
+      "description": "Build expertise in data analysis, visualization, statistical modeling, and predictive analytics.",
+      "icon": "📊",
+      "topics": ["Python", "Pandas", "Tableau", "Statistics", "Forecasting"],
+      "duration": "10 weeks"
+    },
+    {
+      "title": "Cloud & MLOps",
+      "description": "Learn to deploy, monitor, and scale AI models in production using modern cloud infrastructure.",
+      "icon": "☁️",
+      "topics": ["AWS/GCP", "Docker", "Kubernetes", "ML Pipelines", "Monitoring"],
+      "duration": "8 weeks"
+    }
+  ],
+  "internship": {
+    "badge": "Internship Program",
+    "title": "Gain Real-World Experience",
+    "description": "Our internship program offers students and recent graduates the opportunity to work on live projects, mentored by industry professionals.",
+    "features": [
+      { "title": "Live Project Experience", "description": "Work on real client projects using cutting-edge technologies" },
+      { "title": "Mentorship from Experts", "description": "One-on-one guidance from experienced developers and tech leads" },
+      { "title": "Career Pathway", "description": "Top performers receive full-time offers and career guidance" },
+      { "title": "Certification", "description": "Receive industry-recognized certification upon completion" }
+    ],
+    "stats": [
+      { "value": "100+", "label": "Interns Trained" },
+      { "value": "85%", "label": "Placed in Tech Roles" },
+      { "value": "50+", "label": "Partner Colleges" },
+      { "value": "6", "label": "Months Duration" }
+    ]
+  },
+  "cta": {
+    "title": "Ready to Upskill Your Team?",
+    "description": "Partner with us to bring world-class AI training to your organization or institution.",
+    "primaryBtn": { "label": "Request Training", "href": "/contact" },
+    "secondaryBtn": { "label": "View Internship Details", "href": "/internship" }
+  }
+}

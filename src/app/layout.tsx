@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Inter, Poppins, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -8,25 +8,23 @@ import { Footer } from "@/components/Footer";
 import { Loader } from "@/components/Loader";
 import { getGlobalData } from "@/lib/data-loader";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-inter",
-  display: "swap",
-});
-const firaCode = localFont({
-  src: [
-    { path: "./fonts/FiraCode-Light.woff2", weight: "300", style: "normal" },
-    { path: "./fonts/FiraCode-Regular.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/FiraCode-Medium.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/FiraCode-SemiBold.woff2", weight: "600", style: "normal" },
-    { path: "./fonts/FiraCode-Bold.woff2", weight: "700", style: "normal" },
-  ],
+const inter = Inter({
+  subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
 });
-const geistDisplay = localFont({
-  src: "./fonts/GeistVF.woff",
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
   variable: "--font-display",
+  display: "swap",
+});
+
+const plusJakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-heading",
   display: "swap",
 });
 
@@ -127,7 +125,7 @@ export default async function RootLayout({
 }>) {
   const global = await getGlobalData();
   return (
-    <html lang="en" suppressHydrationWarning className={cn("font-sans", geistSans.variable, firaCode.variable, geistDisplay.variable)}>
+    <html lang="en" suppressHydrationWarning className={cn("font-sans", inter.variable, poppins.variable, plusJakarta.variable)}>
       <head>
         {/* JSON-LD Structured Data — Organization */}
         <script

@@ -28,3 +28,5 @@ export const getStatsData = () => getJsonData<any>('stats');
 export const getTeamData = () => getJsonData<any>('team');
 export const getTestimonialsData = () => getJsonData<any>('testimonials');
 export const getClientsData = () => getJsonData<any>('clients');
+export const getAITrainingData = () => getJsonData<any>('ai-training');
+export const getCertificationsData = () => getJsonData<any>('certifications');

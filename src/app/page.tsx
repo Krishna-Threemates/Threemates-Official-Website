@@ -41,7 +41,10 @@ import {
   getFaqData,
   getTestimonialsData,
   getClientsData,
+  getAITrainingData,
+  getCertificationsData,
 } from "@/lib/data-loader";
+import { Certifications } from "@/components/Certifications";
 
 export default async function Home() {
   const home = await getHomeData();
@@ -49,6 +52,8 @@ export default async function Home() {
   const faqs = await getFaqData();
   const testimonials = await getTestimonialsData();
   const clients = await getClientsData();
+  const aiTraining = await getAITrainingData();
+  const certifications = await getCertificationsData();
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -247,6 +252,84 @@ export default async function Home() {
           ))}
         </div>
       </section>
+
+      {/* ════════════════════════════════════════════════════
+          AI TRAINING & SKILL DEVELOPMENT SECTION
+       ════════════════════════════════════════════════════ */}
+      <section className="py-16 md:py-28 px-4 md:px-8 max-w-7xl mx-auto border-t">
+        <div className="text-center mb-10 md:mb-16">
+          <Badge variant="outline" className="rounded-full mb-4 md:mb-6 shadow-soft">{aiTraining.badge}</Badge>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">{aiTraining.title}</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            {aiTraining.description}
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-16">
+          {aiTraining.programs.map((program: any, i: number) => (
+            <Card key={i} className="border shadow-soft card-hover rounded-2xl overflow-hidden group">
+              <CardContent className="p-5 md:p-6">
+                <div className="w-12 h-12 rounded-xl bg-blue-50 dark:bg-blue-900/40 text-blue-600 flex items-center justify-center mb-5 text-2xl">
+                  {program.icon}
+                </div>
+                <h3 className="font-semibold text-lg mb-2">{program.title}</h3>
+                <p className="text-muted-foreground text-sm mb-4 leading-relaxed">{program.description}</p>
+                <div className="flex flex-wrap gap-1.5 mb-3">
+                  {program.topics.slice(0, 3).map((topic: string) => (
+                    <Badge key={topic} variant="secondary" className="text-xs py-0.5">{topic}</Badge>
+                  ))}
+                  {program.topics.length > 3 && (
+                    <Badge variant="secondary" className="text-xs py-0.5">+{program.topics.length - 3}</Badge>
+                  )}
+                </div>
+                <span className="text-xs text-muted-foreground font-mono">{program.duration}</span>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Internship Highlight Card */}
+        <Card className="bg-gradient-to-br from-blue-600 to-blue-800 text-white rounded-3xl overflow-hidden shadow-elevated">
+          <CardContent className="p-6 md:p-10">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <Badge variant="secondary" className="rounded-full mb-4 bg-white/20 text-white border-none">
+                  {aiTraining.internship.badge}
+                </Badge>
+                <h3 className="text-2xl md:text-3xl font-bold mb-3">{aiTraining.internship.title}</h3>
+                <p className="text-white/80 mb-6 leading-relaxed">{aiTraining.internship.description}</p>
+                <div className="grid grid-cols-2 gap-4">
+                  {aiTraining.internship.features.map((f: any, i: number) => (
+                    <div key={i} className="flex items-start gap-2">
+                      <CheckCircle2 className="h-4 w-4 text-white/80 mt-0.5 flex-shrink-0" />
+                      <span className="text-sm text-white/90">{f.title}</span>
+                    </div>
+                  ))}
+                </div>
+                <Link
+                  href={aiTraining.cta.secondaryBtn.href}
+                  className="btn-press inline-flex items-center justify-center rounded-full bg-white text-blue-700 text-sm font-medium px-6 h-11 mt-6 hover:bg-white/90 transition-all shadow-medium"
+                >
+                  View Internship Details <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </div>
+              <div className="grid grid-cols-2 gap-4">
+                {aiTraining.internship.stats.map((stat: any, i: number) => (
+                  <div key={i} className="text-center p-4 bg-white/10 rounded-2xl">
+                    <div className="text-3xl md:text-4xl font-bold font-mono mb-1">{stat.value}</div>
+                    <div className="text-sm text-white/80">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </section>
+
+      {/* ════════════════════════════════════════════════════
+          CERTIFICATIONS & PARTNERSHIPS
+       ════════════════════════════════════════════════════ */}
+      <Certifications data={certifications} />
 
       {/* ════════════════════════════════════════════════════
           MISSION STATEMENT

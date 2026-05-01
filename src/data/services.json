@@ -1,42 +1,45 @@
 {
   "hero": {
-    "title": "Our Services",
-    "description": "We provide end-to-end IT services to help businesses build, scale, and optimize digital products."
+    "title": "Modern IT Solutions for Growing Businesses",
+    "description": "We provide end-to-end IT services to help businesses build, scale, and optimize digital products. From custom software to cloud infrastructure, we cover the complete technology stack."
   },
   "offerings": [
     {
       "id": "erp",
       "title": "ERP Development",
-      "description": "Custom ERP platforms designed for schools, colleges, hospitals, and enterprises to manage operations, HR, inventory, billing, and reporting.",
+      "description": "Complete ERP platforms designed for schools, colleges, hospitals, and enterprises to manage operations efficiently. Our solutions include HR management, inventory control, billing systems, and comprehensive reporting dashboards.",
       "features": [
         "School Management Systems",
         "College Academic ERP",
-        "Hospital Management",
+        "Hospital Management System",
         "HR & Payroll Modules",
-        "Billing & Inventory"
+        "Inventory & Billing",
+        "Analytics & Reporting"
       ],
       "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop"
     },
     {
       "id": "web",
       "title": "Web Application Development",
-      "description": "High-performance web applications built using modern frameworks and scalable backend architectures.",
+      "description": "High-performance web applications built using modern frameworks and scalable backend architectures. We create everything from corporate websites to complex SaaS platforms with real-time features.",
       "features": [
         "React & Next.js Development",
-        "Node.js Backend Systems",
+        "Node.js & Python Backend",
         "REST & GraphQL APIs",
         "Admin Dashboards",
-        "Cloud-Ready Architecture"
+        "E-commerce Platforms",
+        "Real-time Applications"
       ],
       "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=800&auto=format&fit=crop"
     },
     {
       "id": "mobile",
       "title": "Mobile App Development",
-      "description": "Development of powerful mobile applications for Android and iOS with seamless backend integration.",
+      "description": "Powerful cross-platform mobile applications for Android and iOS with seamless backend integration. We build apps that deliver great user experiences while handling complex business logic.",
       "features": [
-        "Cross-Platform Development",
         "React Native & Flutter",
+        "Cross-Platform Development",
+        "Native iOS & Android",
         "Backend API Integration",
         "Push Notifications",
         "App Store Deployment"
@@ -46,24 +49,40 @@
     {
       "id": "saas",
       "title": "SaaS Application Development",
-      "description": "Complete SaaS product development including architecture design, multi-tenant systems, and subscription management.",
+      "description": "Complete SaaS product development including architecture design, multi-tenant systems, and subscription management. We help you build and scale software products that serve multiple customers.",
       "features": [
         "Multi-Tenant Architecture",
-        "Subscription & Billing Systems",
+        "Subscription & Billing",
         "User Role Management",
         "Analytics Dashboards",
+        "API-first Design",
         "Cloud Deployment"
       ],
       "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
     },
     {
+      "id": "cms",
+      "title": "CMS Development",
+      "description": "Custom Content Management Systems and portals tailored to your organization's needs. Manage digital content, media, documents, and workflows with intuitive interfaces.",
+      "features": [
+        "Custom CMS Development",
+        "Document Management",
+        "Media Library",
+        "Workflow Automation",
+        "Role-based Access",
+        "Content Versioning"
+      ],
+      "image": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop"
+    },
+    {
       "id": "custom",
       "title": "Custom Software Development",
-      "description": "Tailored software solutions designed to match unique business requirements.",
+      "description": "Tailored software solutions designed to match unique business requirements. From process automation to data management, we build solutions that fit your specific needs.",
       "features": [
         "Requirement Analysis",
         "Custom Business Logic",
         "Third-Party Integrations",
+        "Legacy System Migration",
         "Data Migration",
         "Scalable Solutions"
       ],
@@ -71,14 +90,15 @@
     },
     {
       "id": "cloud",
-      "title": "Cloud Deployment & DevOps",
-      "description": "Secure cloud infrastructure setup, CI/CD pipelines, and performance optimization.",
+      "title": "Cloud & DevOps",
+      "description": "Secure cloud infrastructure setup, CI/CD pipelines, and performance optimization. We help you deploy, monitor, and scale your applications with modern DevOps practices.",
       "features": [
-        "AWS / Azure / GCP Setup",
-        "CI/CD Pipeline Configuration",
+        "AWS / Azure / GCP",
+        "CI/CD Pipeline Setup",
         "Docker & Kubernetes",
         "Performance Monitoring",
-        "Security & Compliance"
+        "Security & Compliance",
+        "24/7 Infrastructure Support"
       ],
       "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=800&auto=format&fit=crop"
     }
