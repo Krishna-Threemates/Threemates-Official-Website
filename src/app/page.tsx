@@ -187,32 +187,72 @@ export default async function Home() {
           </Link>
         </div>
 
-        <div className="mt-8 grid gap-5 lg:grid-cols-[1.25fr_0.95fr]">
-          <Link href={`/work/${featuredProjects[0].slug}`} className="editor-card group block p-4 sm:p-5">
-            <div className="flex flex-wrap gap-2 text-[11px] text-slate-500">
-              <span className="tag-chip">{featuredProjects[0].category}</span>
-              <span className="tag-chip">{featuredProjects[0].client}</span>
-            </div>
-            <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-slate-950">
-              {featuredProjects[0].title}
-            </h3>
-            <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
-              {featuredProjects[0].description}
-            </p>
-            <div className="relative mt-4 aspect-[4/3] overflow-hidden rounded-[1.4rem] bg-slate-100">
-              <Image
-                src={featuredProjects[0].image}
-                alt={featuredProjects[0].title}
-                fill
-                className="object-cover img-zoom"
-                sizes="(max-width: 1024px) 100vw, 60vw"
-              />
-            </div>
-          </Link>
+        <div className="mt-8 grid gap-5 lg:grid-cols-[1.22fr_0.98fr] lg:items-start">
+          <div className="grid gap-5">
+            <Link href={`/work/${featuredProjects[0].slug}`} className="editor-card group block self-start p-4 sm:p-5">
+              <div className="flex flex-wrap gap-2 text-[11px] text-slate-500">
+                <span className="tag-chip">{featuredProjects[0].category}</span>
+                <span className="tag-chip">{featuredProjects[0].client}</span>
+              </div>
+              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.03em] text-slate-950">
+                {featuredProjects[0].title}
+              </h3>
+              <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">
+                {featuredProjects[0].description}
+              </p>
+              <div className="mt-4 grid gap-2 sm:grid-cols-3">
+                <div className="rounded-xl border border-blue-100 bg-blue-50/70 px-3 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">Routing</p>
+                  <p className="mt-1 text-xs text-slate-700">AI intent-based call flow</p>
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50/70 px-3 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">Agent Assist</p>
+                  <p className="mt-1 text-xs text-slate-700">Live response suggestions</p>
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50/70 px-3 py-2">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">Analytics</p>
+                  <p className="mt-1 text-xs text-slate-700">Queue and quality insights</p>
+                </div>
+              </div>
+              <div className="relative mt-4 aspect-[4/3] overflow-hidden rounded-[1.4rem] bg-slate-100">
+                <Image
+                  src={featuredProjects[0].image}
+                  alt={featuredProjects[0].title}
+                  fill
+                  className="object-cover img-zoom"
+                  sizes="(max-width: 1024px) 100vw, 60vw"
+                />
+              </div>
+            </Link>
 
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1">
+            <div className="editor-card pastel-blue self-start p-5 sm:p-6">
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <h3 className="text-xl font-semibold tracking-[-0.03em] text-slate-950">Operational impact snapshot</h3>
+                <span className="tag-chip">{featuredProjects[0].category}</span>
+              </div>
+              <div className="mt-4 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-[1rem] border border-white/85 bg-white/80 px-4 py-3 shadow-soft">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">Faster intake</p>
+                  <p className="mt-1 text-sm text-slate-700">Smart triage across inbound support channels.</p>
+                </div>
+                <div className="rounded-[1rem] border border-white/85 bg-white/80 px-4 py-3 shadow-soft">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">Lower overhead</p>
+                  <p className="mt-1 text-sm text-slate-700">Automation reduces repetitive team workload.</p>
+                </div>
+                <div className="rounded-[1rem] border border-white/85 bg-white/80 px-4 py-3 shadow-soft">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-blue-700">Actionable data</p>
+                  <p className="mt-1 text-sm text-slate-700">Clear visibility into queue and SLA performance.</p>
+                </div>
+              </div>
+              <p className="mt-4 text-sm leading-6 text-slate-600">
+                Teams use this platform to run support, monitor service quality, and scale response operations without increasing complexity.
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-1 lg:items-start">
             {featuredProjects.slice(1, 3).map((project: any) => (
-              <Link key={project.slug} href={`/work/${project.slug}`} className="editor-card group block p-4">
+              <Link key={project.slug} href={`/work/${project.slug}`} className="editor-card group block self-start p-4">
                 <h3 className="text-xl font-semibold tracking-[-0.03em] text-slate-950">{project.title}</h3>
                 <div className="mt-2 flex flex-wrap gap-2 text-[11px] text-slate-500">
                   <span className="tag-chip">{project.client}</span>
@@ -233,7 +273,7 @@ export default async function Home() {
           </div>
         </div>
 
-        <div className="mt-5 grid gap-5 md:grid-cols-[0.55fr_1fr]">
+        <div className="mt-5 grid gap-5 md:grid-cols-[0.55fr_1fr] md:items-start">
           <div className="editor-card pastel-sky flex flex-col justify-between p-6">
             <div>
               <div className="text-4xl text-blue-500">↯</div>
@@ -249,7 +289,7 @@ export default async function Home() {
 
           <div className="grid gap-5 sm:grid-cols-2">
             {featuredProjects.slice(3, 5).map((project: any) => (
-              <Link key={project.slug} href={`/work/${project.slug}`} className="editor-card group block p-4">
+              <Link key={project.slug} href={`/work/${project.slug}`} className="editor-card group block self-start p-4">
                 <h3 className="text-xl font-semibold tracking-[-0.03em] text-slate-950">{project.title}</h3>
                 <div className="mt-2 flex flex-wrap gap-2 text-[11px] text-slate-500">
                   <span className="tag-chip">{project.client}</span>

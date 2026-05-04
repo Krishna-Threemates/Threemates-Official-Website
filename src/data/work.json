@@ -11,7 +11,7 @@
       "title": "AI Powered Digital Call Center",
       "category": "Enterprise Software",
       "client": "CUSTOMER OPERATIONS",
-      "image": "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=1400&auto=format&fit=crop",
       "description": "An AI-led call center platform that automates inbound support, agent assist, call routing, summaries, and service analytics from one unified workspace.",
       "link": "/work/ai-powered-digital-call-center",
       "caseStudy": {
@@ -60,7 +60,7 @@
       "title": "WhatsApp Business Cloud Suite",
       "category": "SaaS",
       "client": "CONVERSATIONAL COMMERCE",
-      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=1400&auto=format&fit=crop",
       "description": "A business messaging platform for lead capture, campaign delivery, customer support, and workflow automation built on WhatsApp Business Cloud APIs.",
       "link": "/work/whatsapp-business-cloud-suite",
       "caseStudy": {
@@ -109,7 +109,7 @@
       "title": "Conversational Automation Hub",
       "category": "SaaS",
       "client": "DIGITAL ENGAGEMENT",
-      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop",
       "description": "A multi-channel automation hub for chat, lead nurturing, follow-up workflows, and AI-powered customer interactions across web and messaging channels.",
       "link": "/work/conversational-automation-hub",
       "caseStudy": {
@@ -158,7 +158,7 @@
       "title": "Smart Campus ERP",
       "category": "ERP",
       "client": "SCHOOLS",
-      "image": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1200&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1400&auto=format&fit=crop",
       "description": "A unified ERP for admissions, academics, finance, HR, communication, library, transport, and multi-role campus operations.",
       "link": "/work/smart-campus-erp",
       "caseStudy": {
@@ -235,17 +235,17 @@
           {
             "title": "Executive dashboard",
             "description": "A campus-wide view of student count, attendance, fee summary, and reporting trends in one command surface.",
-            "image": "/assets/erp-dashboard-showcase.svg"
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1400&auto=format&fit=crop"
           },
           {
             "title": "Academic program management",
             "description": "Program, course, division, timetable, and subject workflows stay linked so academic operations do not fragment.",
-            "image": "/assets/erp-program-showcase.svg"
+            "image": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop"
           },
           {
             "title": "User and department control",
             "description": "Departments, user roles, permissions, attendance, and staff operations are managed with role-safe visibility.",
-            "image": "/assets/erp-attendance-showcase.svg"
+            "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=1400&auto=format&fit=crop"
           }
         ],
         "stats": [
@@ -270,7 +270,7 @@
       "title": "College Academic ERP",
       "category": "ERP",
       "client": "SmartCampus Colleges",
-      "image": "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop",
+      "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1400&auto=format&fit=crop",
       "description": "Academic management system for colleges with course modules, assignments, grading, and student portals.",
       "link": "/work/college-erp",
       "caseStudy": {

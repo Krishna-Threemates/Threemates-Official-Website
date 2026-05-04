@@ -35,7 +35,7 @@ export default async function Work() {
               <Layers3 className="h-3.5 w-3.5" />
               Projects
             </span>
-            <h1 className="display-title mt-6 text-balance">Our top work between 2019-25</h1>
+            <h1 className="display-title mt-6 text-balance">Our top work  </h1>
             <p className="lead-copy mx-auto mt-5 max-w-2xl">{data.hero.description}</p>
           </div>
 
