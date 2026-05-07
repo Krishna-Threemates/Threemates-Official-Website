@@ -37,7 +37,9 @@ export const FOOTER_LINKS: NavItem[] = [
 
 export const LEGAL_LINKS: NavItem[] = [
   { href: "/privacy-policy", label: "Privacy Policy" },
-  { href: "/refund-terms", label: "Refund & T&C" },
+  { href: "/terms-of-service", label: "Terms of Service" },
+  { href: "/refund-terms", label: "Refund Policy" },
+  { href: "/user-data-deletion", label: "Data Deletion" },
   { href: "/dpdp-compliance", label: "DPDP Compliance" },
 ];
 

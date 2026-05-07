@@ -49,7 +49,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
             priority: 0.5,
         },
         {
+            url: `${SITE_URL}/terms-of-service`,
+            lastModified: now,
+            changeFrequency: "yearly" as const,
+            priority: 0.5,
+        },
+        {
             url: `${SITE_URL}/refund-terms`,
+            lastModified: now,
+            changeFrequency: "yearly" as const,
+            priority: 0.5,
+        },
+        {
+            url: `${SITE_URL}/user-data-deletion`,
             lastModified: now,
             changeFrequency: "yearly" as const,
             priority: 0.5,
