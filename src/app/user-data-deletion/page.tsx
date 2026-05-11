@@ -15,19 +15,19 @@ const deletionItems = [
 export const metadata: Metadata = {
   title: "User Data Deletion",
   description:
-    "Learn how to request deletion of your personal data from Threemates through the account dashboard or by email under DPDP Act 2023.",
+    `Learn how to request deletion of your personal data from ${COMPANY_NAME} through the account dashboard or by email under DPDP Act 2023.`,
   alternates: { canonical: "/user-data-deletion" },
   openGraph: {
-    title: "User Data Deletion | Threemates",
+    title: `User Data Deletion | ${COMPANY_NAME}`,
     description:
-      "The verified process, timelines, retention carve-outs, and grievance path for requesting deletion of personal data held by Threemates.",
+      `The verified process, timelines, retention carve-outs, and grievance path for requesting deletion of personal data held by ${COMPANY_NAME}.`,
     url: "/user-data-deletion",
     type: "website",
   },
   twitter: {
-    title: "User Data Deletion | Threemates",
+    title: `User Data Deletion | ${COMPANY_NAME}`,
     description:
-      "How to request deletion of your personal data from Threemates, including email instructions and legal retention exceptions.",
+      `How to request deletion of your personal data from ${COMPANY_NAME}, including email instructions and legal retention exceptions.`,
   },
 };
 
@@ -35,8 +35,8 @@ export default function UserDataDeletionPage() {
   return (
     <LegalPageShell
       eyebrow="User Data Deletion"
-      title="How to request erasure of your personal data from Threemates."
-      description="If you want Threemates to permanently delete your personal data, email us from your registered email address and we will process the request within 14 days."
+      title={`How to request erasure of your personal data from ${COMPANY_NAME}.`}
+      description={`If you want ${COMPANY_NAME} to permanently delete your personal data, email us from your registered email address and we will process the request within 14 days.`}
       currentPath="/user-data-deletion"
       meta={[
         { label: "Effective date", value: DATA_DELETION_EFFECTIVE_DATE },
@@ -63,7 +63,7 @@ export default function UserDataDeletionPage() {
         {
           title: "What this covers",
           description:
-            "This page covers permanent deletion of the personal data you shared directly with Threemates through your account and related services.",
+            `This page covers permanent deletion of the personal data you shared directly with ${COMPANY_NAME} through your account and related services.`,
         },
       ]}
     >
@@ -96,7 +96,7 @@ export default function UserDataDeletionPage() {
       <LegalSection
         eyebrow="Deletion scope"
         title="What gets deleted"
-        description="When your request is approved, we permanently remove the personal data you shared with Threemates through your account and service interactions."
+        description={`When your request is approved, we permanently remove the personal data you shared with ${COMPANY_NAME} through your account and service interactions.`}
       >
         <div className="space-y-3">
           {deletionItems.map((item) => (

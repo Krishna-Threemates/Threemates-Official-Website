@@ -6,7 +6,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Loader } from "@/components/Loader";
 import { getGlobalData } from "@/lib/data-loader";
-import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_LOCATIONS, SITE_URL } from "@/constants/site";
+import { COMPANY_EMAIL, COMPANY_LOCATIONS, COMPANY_NAME, COMPANY_PHONE, SITE_URL } from "@/constants/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,11 +33,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || SITE_URL;
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Threemates — Modern IT Solutions & Software Development",
-    template: "%s | Threemates",
+    default: `${COMPANY_NAME} — Modern IT Solutions & Software Development`,
+    template: `%s | ${COMPANY_NAME}`,
   },
   description:
-    "Threemates is a technology company providing modern IT services including ERP systems, SaaS platforms, web development, and mobile applications. Based in Bhubaneswar, India.",
+    `${COMPANY_NAME} is a technology company providing modern IT services including ERP systems, SaaS platforms, web development, and mobile applications. Based in Bhubaneswar, India.`,
   keywords: [
     "Threemates",
     "software development",
@@ -57,9 +57,9 @@ export const metadata: Metadata = {
     "Node.js",
     "digital transformation",
   ],
-  authors: [{ name: "Threemates", url: siteUrl }],
-  creator: "Threemates",
-  publisher: "Threemates",
+  authors: [{ name: COMPANY_NAME, url: siteUrl }],
+  creator: COMPANY_NAME,
+  publisher: COMPANY_NAME,
   formatDetection: {
     email: false,
     address: false,
@@ -72,8 +72,8 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: siteUrl,
-    siteName: "Threemates",
-    title: "Threemates — Modern IT Solutions & Software Development",
+    siteName: COMPANY_NAME,
+    title: `${COMPANY_NAME} — Modern IT Solutions & Software Development`,
     description:
       "We build ERP systems, SaaS platforms, web & mobile applications that help businesses digitize operations and scale efficiently.",
     images: [
@@ -81,14 +81,14 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Threemates — Modern IT Solutions & Software Development",
+        alt: `${COMPANY_NAME} — Modern IT Solutions & Software Development`,
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Threemates — Modern IT Solutions & Software Development",
+    title: `${COMPANY_NAME} — Modern IT Solutions & Software Development`,
     description:
       "We build ERP systems, SaaS platforms, web & mobile applications that help businesses digitize operations and scale efficiently.",
     images: ["/og-image.png"],
@@ -134,11 +134,11 @@ export default async function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Threemates",
+              name: COMPANY_NAME,
               url: siteUrl,
               logo: `${siteUrl}/assets/darkIcon.png`,
               description:
-                "Threemates is a technology company providing modern IT services including ERP systems, SaaS platforms, web development, and mobile applications.",
+                `${COMPANY_NAME} is a technology company providing modern IT services including ERP systems, SaaS platforms, web development, and mobile applications.`,
               email: COMPANY_EMAIL,
               telephone: COMPANY_PHONE,
               address: {
@@ -167,7 +167,7 @@ export default async function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Threemates",
+              name: COMPANY_NAME,
               url: siteUrl,
               potentialAction: {
                 "@type": "SearchAction",

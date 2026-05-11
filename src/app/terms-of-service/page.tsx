@@ -17,19 +17,19 @@ const useRules = [
 export const metadata: Metadata = {
   title: "Terms of Service",
   description:
-    "Review the rules governing your access to the Threemates website, digital services, training programs, and support channels.",
+    `Review the rules governing your access to the ${COMPANY_NAME} website, digital services, training programs, and support channels.`,
   alternates: { canonical: "/terms-of-service" },
   openGraph: {
-    title: "Terms of Service | Threemates",
+    title: `Terms of Service | ${COMPANY_NAME}`,
     description:
-      "The core contractual terms for using the Threemates website, software services, training programs, and related support.",
+      `The core contractual terms for using the ${COMPANY_NAME} website, software services, training programs, and related support.`,
     url: "/terms-of-service",
     type: "website",
   },
   twitter: {
-    title: "Terms of Service | Threemates",
+    title: `Terms of Service | ${COMPANY_NAME}`,
     description:
-      "The core rules, payment terms, intellectual-property limits, and liability boundaries for using Threemates services.",
+      `The core rules, payment terms, intellectual-property limits, and liability boundaries for using ${COMPANY_NAME} services.`,
   },
 };
 
@@ -37,8 +37,8 @@ export default function TermsOfServicePage() {
   return (
     <LegalPageShell
       eyebrow="Terms of Service"
-      title="The core rules for using the Threemates website, services, and learning products."
-      description="These Terms of Service govern your use of the Threemates website, consultations, software services, training programs, AI skilling offerings, support channels, and any related digital experiences. By accessing or using the services, you agree to these terms."
+      title={`The core rules for using the ${COMPANY_NAME} website, services, and learning products.`}
+      description={`These Terms of Service govern your use of the ${COMPANY_NAME} website, consultations, software services, training programs, AI skilling offerings, support channels, and any related digital experiences. By accessing or using the services, you agree to these terms.`}
       currentPath="/terms-of-service"
       meta={[
         { label: "Effective date", value: TERMS_EFFECTIVE_DATE },
@@ -50,7 +50,7 @@ export default function TermsOfServicePage() {
         {
           title: "Contract scope",
           description:
-            "These terms apply when you browse the site, submit a form, sign up for a program, buy a service, or use any Threemates-managed account or portal.",
+            `These terms apply when you browse the site, submit a form, sign up for a program, buy a service, or use any ${COMPANY_NAME}-managed account or portal.`,
         },
         {
           title: "Payments and refunds",
@@ -176,13 +176,13 @@ export default function TermsOfServicePage() {
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           <LegalCard title="Our materials" className="pastel-blue">
-            <p>Unless a signed agreement says otherwise, all website content, designs, source assets, proposals, slides, templates, course videos, notes, and training materials remain the property of Threemates or its licensors.</p>
+            <p>Unless a signed agreement says otherwise, all website content, designs, source assets, proposals, slides, templates, course videos, notes, and training materials remain the property of {COMPANY_NAME} or its licensors.</p>
           </LegalCard>
           <LegalCard title="Limited licence">
             <p>You receive a limited, revocable, non-exclusive, non-transferable licence to access and use the materials only for the internal business or learning purpose for which they were provided.</p>
           </LegalCard>
           <LegalCard title="Your submissions" className="pastel-sky">
-            <p>You retain ownership of the content you lawfully submit, but you grant Threemates the limited rights needed to host, review, process, reproduce, and communicate that content for service delivery, support, and internal operations.</p>
+            <p>You retain ownership of the content you lawfully submit, but you grant {COMPANY_NAME} the limited rights needed to host, review, process, reproduce, and communicate that content for service delivery, support, and internal operations.</p>
           </LegalCard>
         </div>
       </LegalSection>
@@ -202,7 +202,7 @@ export default function TermsOfServicePage() {
           <LegalCard title="Liability cap">
             <div className="flex items-start gap-3">
               <Gavel className="mt-1 h-5 w-5 text-blue-600" />
-              <p>To the maximum extent permitted by law, Threemates&apos; aggregate liability for a claim arising from a paid service is limited to the amount actually paid for that specific service during the 12 months preceding the claim.</p>
+              <p>To the maximum extent permitted by law, {COMPANY_NAME}&apos;s aggregate liability for a claim arising from a paid service is limited to the amount actually paid for that specific service during the 12 months preceding the claim.</p>
             </div>
             <p>We are not liable for indirect, incidental, special, consequential, or punitive losses, including lost profits, lost data, reputational damage, or lost business opportunities arising from platform use or service delays.</p>
           </LegalCard>

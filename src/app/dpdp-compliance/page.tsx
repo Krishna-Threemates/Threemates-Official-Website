@@ -12,19 +12,19 @@ import { LegalCard, LegalPageShell, LegalSection, LegalTable } from "@/component
 export const metadata: Metadata = {
   title: "DPDP Compliance",
   description:
-    "Understand how Threemates aligns its data handling practices with the Digital Personal Data Protection Act, 2023, including user rights and security controls.",
+    `Understand how ${COMPANY_NAME} aligns its data handling practices with the Digital Personal Data Protection Act, 2023, including user rights and security controls.`,
   alternates: { canonical: "/dpdp-compliance" },
   openGraph: {
-    title: "DPDP Compliance | Threemates",
+    title: `DPDP Compliance | ${COMPANY_NAME}`,
     description:
-      "Threemates' DPDP-aligned approach to notice, consent, security, retention, grievance handling, and Data Principal rights.",
+      `${COMPANY_NAME}'s DPDP-aligned approach to notice, consent, security, retention, grievance handling, and Data Principal rights.`,
     url: "/dpdp-compliance",
     type: "website",
   },
   twitter: {
-    title: "DPDP Compliance | Threemates",
+    title: `DPDP Compliance | ${COMPANY_NAME}`,
     description:
-      "Threemates' DPDP-aligned approach to notice, consent, security, retention, grievance handling, and Data Principal rights.",
+      `${COMPANY_NAME}'s DPDP-aligned approach to notice, consent, security, retention, grievance handling, and Data Principal rights.`,
   },
 };
 
@@ -93,7 +93,7 @@ export default function DpdpCompliancePage() {
     <LegalPageShell
       eyebrow="DPDP Compliance"
       title="Data protection, consent, and integrity controls aligned to India's DPDP framework."
-      description="This page explains how Threemates approaches privacy governance, notice, consent management, security controls, grievance handling, and user rights in line with the Digital Personal Data Protection Act, 2023 and related obligations."
+      description={`This page explains how ${COMPANY_NAME} approaches privacy governance, notice, consent management, security controls, grievance handling, and user rights in line with the Digital Personal Data Protection Act, 2023 and related obligations.`}
       currentPath="/dpdp-compliance"
       meta={[
         { label: "Effective date", value: LEGAL_EFFECTIVE_DATE },
@@ -105,7 +105,7 @@ export default function DpdpCompliancePage() {
         {
           title: "Our role",
           description:
-            "Threemates acts as the Data Fiduciary for the personal data it collects through the website, learner workflows, and operational processes it controls.",
+            `${COMPANY_NAME} acts as the Data Fiduciary for the personal data it collects through the website, learner workflows, and operational processes it controls.`,
         },
         {
           title: "Service providers",
@@ -126,14 +126,14 @@ export default function DpdpCompliancePage() {
     >
       <LegalSection
         eyebrow="Governance"
-        title="How Threemates approaches DPDP compliance"
+        title={`How ${COMPANY_NAME} approaches DPDP compliance`}
         description={`${COMPANY_NAME} provides digital services and learning programs, so it handles personal data as part of onboarding, payments, course delivery, support, and security operations. We aim to collect the minimum data reasonably needed for those purposes and to explain those uses clearly before or at the point of collection.`}
       >
         <div className="grid gap-4 lg:grid-cols-[1.05fr_0.95fr]">
           <LegalCard title="Data Fiduciary role" className="pastel-blue">
             <div className="flex items-start gap-3">
               <BadgeCheck className="mt-1 h-5 w-5 text-blue-600" />
-              <p>For personal data collected through our site and services, Threemates determines the purpose and means of processing and is therefore the primary accountable entity for those activities.</p>
+              <p>For personal data collected through our site and services, {COMPANY_NAME} determines the purpose and means of processing and is therefore the primary accountable entity for those activities.</p>
             </div>
             <p>Third-party tools such as AWS and Razorpay support hosting, payment, and operations under their own contractual and legal obligations.</p>
           </LegalCard>

@@ -12,19 +12,19 @@ import { LegalCard, LegalPageShell, LegalSection, LegalTable } from "@/component
 export const metadata: Metadata = {
   title: "Refund Policy & Terms",
   description:
-    "Review Threemates enrollment rules, learner responsibilities, refund timelines, intellectual property restrictions, and dispute handling terms.",
+    `Review ${COMPANY_NAME} enrollment rules, learner responsibilities, refund timelines, intellectual property restrictions, and dispute handling terms.`,
   alternates: { canonical: "/refund-terms" },
   openGraph: {
-    title: "Refund Policy & Terms | Threemates",
+    title: `Refund Policy & Terms | ${COMPANY_NAME}`,
     description:
-      "The commercial and usage terms governing Threemates courses, cohort-based programs, skilling services, and related refunds.",
+      `The commercial and usage terms governing ${COMPANY_NAME} courses, cohort-based programs, skilling services, and related refunds.`,
     url: "/refund-terms",
     type: "website",
   },
   twitter: {
-    title: "Refund Policy & Terms | Threemates",
+    title: `Refund Policy & Terms | ${COMPANY_NAME}`,
     description:
-      "The commercial and usage terms governing Threemates courses, cohort-based programs, skilling services, and related refunds.",
+      `The commercial and usage terms governing ${COMPANY_NAME} courses, cohort-based programs, skilling services, and related refunds.`,
   },
 };
 
@@ -63,7 +63,7 @@ const refundRows = [
     "1-on-1 mentoring or interview sessions",
     "At least 24 hours before the session",
     "Full refund or one-time reschedule",
-    "Late cancellations and no-shows are non-refundable unless Threemates confirms an exception in writing.",
+    `Late cancellations and no-shows are non-refundable unless ${COMPANY_NAME} confirms an exception in writing.`,
   ],
   [
     "Workshops or one-day bootcamps",
@@ -77,8 +77,8 @@ export default function RefundTermsPage() {
   return (
     <LegalPageShell
       eyebrow="Refund Policy & Terms"
-      title="Clear enrollment, payment, refund, and usage rules for every Threemates program."
-      description="These terms govern access to courses, cohorts, workshops, mentoring sessions, and related services offered by Threemates. By registering, paying, or using the platform, you agree to the terms below."
+      title={`Clear enrollment, payment, refund, and usage rules for every ${COMPANY_NAME} program.`}
+      description={`These terms govern access to courses, cohorts, workshops, mentoring sessions, and related services offered by ${COMPANY_NAME}. By registering, paying, or using the platform, you agree to the terms below.`}
       currentPath="/refund-terms"
       meta={[
         { label: "Effective date", value: LEGAL_EFFECTIVE_DATE },
@@ -118,7 +118,7 @@ export default function RefundTermsPage() {
           <LegalCard title="Formation of agreement" className="pastel-blue">
             <div className="flex items-start gap-3">
               <BookOpenCheck className="mt-1 h-5 w-5 text-blue-600" />
-              <p>Your agreement with Threemates begins when you complete enrollment, make a payment, use the program portal, or continue using a service after these terms are published.</p>
+              <p>Your agreement with {COMPANY_NAME} begins when you complete enrollment, make a payment, use the program portal, or continue using a service after these terms are published.</p>
             </div>
           </LegalCard>
           <LegalCard title="Eligibility">
@@ -155,7 +155,7 @@ export default function RefundTermsPage() {
           </LegalCard>
           <LegalCard title="Scheduling and program changes" className="pastel-sky">
             <p>We may change instructors, mentors, dates, session timings, or delivery formats where operationally necessary, while preserving the core substance of the purchased offering wherever reasonably possible.</p>
-            <p>If Threemates cancels a paid program before it begins and no reasonable alternative is offered, the affected learner will be eligible for a refund.</p>
+            <p>If {COMPANY_NAME} cancels a paid program before it begins and no reasonable alternative is offered, the affected learner will be eligible for a refund.</p>
           </LegalCard>
           <LegalCard title="Promotions and special offers">
             <p>Scholarship seats, discounted offers, bundle pricing, and limited-time promotions may carry program-specific refund conditions. Where they differ from the general policy below, the offer-specific terms will prevail.</p>
@@ -191,7 +191,7 @@ export default function RefundTermsPage() {
       >
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           <LegalCard title="Content ownership">
-            <p>Unless stated otherwise, all videos, notes, slides, assignments, session recordings, examples, templates, exercises, code samples, and brand materials remain the property of Threemates or its licensors.</p>
+            <p>Unless stated otherwise, all videos, notes, slides, assignments, session recordings, examples, templates, exercises, code samples, and brand materials remain the property of {COMPANY_NAME} or its licensors.</p>
           </LegalCard>
           <LegalCard title="Permitted use" className="pastel-sky">
             <p>You receive a limited, non-exclusive, non-transferable licence to access purchased material for your own learning and internal evaluation only.</p>
@@ -227,7 +227,7 @@ export default function RefundTermsPage() {
           <LegalCard title="Liability and governing law">
             <div className="flex items-start gap-3">
               <Gavel className="mt-1 h-5 w-5 text-blue-600" />
-              <p>To the maximum extent permitted by law, Threemates&rsquo; aggregate liability for a claim relating to a paid offering is limited to the amount paid for that specific offering.</p>
+              <p>To the maximum extent permitted by law, {COMPANY_NAME}&rsquo;s aggregate liability for a claim relating to a paid offering is limited to the amount paid for that specific offering.</p>
             </div>
             <p>These terms are governed by the laws of India. Courts located in Thane, Maharashtra will have exclusive jurisdiction, subject to any mandatory consumer-protection rights that cannot be contractually waived.</p>
             <p>Before formal proceedings, both sides should first attempt a good-faith written resolution process by contacting <a href={`mailto:${COMPANY_EMAIL}`} className="font-medium text-blue-700 hover:text-blue-800">{COMPANY_EMAIL}</a>.</p>

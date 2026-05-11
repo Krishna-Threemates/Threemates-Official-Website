@@ -15,19 +15,19 @@ import { LegalCard, LegalPageShell, LegalSection, LegalTable } from "@/component
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "Read how Threemates collects, uses, stores, and protects personal data across its software skilling, AI cohort, and website services.",
+    `Read how ${COMPANY_NAME} collects, uses, stores, and protects personal data across its software skilling, AI cohort, and website services.`,
   alternates: { canonical: "/privacy-policy" },
   openGraph: {
-    title: "Privacy Policy | Threemates",
+    title: `Privacy Policy | ${COMPANY_NAME}`,
     description:
-      "How Threemates handles learner, customer, and website data, including AWS hosting, Razorpay payments, retention, and privacy rights.",
+      `How ${COMPANY_NAME} handles learner, customer, and website data, including AWS hosting, Razorpay payments, retention, and privacy rights.`,
     url: "/privacy-policy",
     type: "website",
   },
   twitter: {
-    title: "Privacy Policy | Threemates",
+    title: `Privacy Policy | ${COMPANY_NAME}`,
     description:
-      "How Threemates handles learner, customer, and website data, including AWS hosting, Razorpay payments, retention, and privacy rights.",
+      `How ${COMPANY_NAME} handles learner, customer, and website data, including AWS hosting, Razorpay payments, retention, and privacy rights.`,
   },
 };
 
@@ -77,8 +77,8 @@ export default function PrivacyPolicyPage() {
   return (
     <LegalPageShell
       eyebrow="Privacy Policy"
-      title="Privacy for learners, clients, and visitors across every Threemates touchpoint."
-      description="This policy explains what personal data Threemates collects, why we collect it, how we secure it on AWS infrastructure, how Razorpay supports payment processing, and the choices available to you under applicable Indian law."
+      title={`Privacy for learners, clients, and visitors across every ${COMPANY_NAME} touchpoint.`}
+      description={`This policy explains what personal data ${COMPANY_NAME} collects, why we collect it, how we secure it on AWS infrastructure, how Razorpay supports payment processing, and the choices available to you under applicable Indian law.`}
       currentPath="/privacy-policy"
       meta={[
         { label: "Effective date", value: LEGAL_EFFECTIVE_DATE },
@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
         {
           title: "Payment processing",
           description:
-            "Razorpay processes transactions. Threemates does not store full card numbers, CVV data, or bank login credentials on its own systems.",
+            `Razorpay processes transactions. ${COMPANY_NAME} does not store full card numbers, CVV data, or bank login credentials on its own systems.`,
         },
         {
           title: "Where to write to us",
@@ -117,7 +117,7 @@ export default function PrivacyPolicyPage() {
         <div className="grid gap-4 lg:grid-cols-[1.15fr_0.85fr]">
           <LegalCard title="Business identity" className="pastel-blue">
             <p>
-              Threemates is an India-based technology and skilling company operating from Maharashtra and Odisha. We offer software development training,
+              {COMPANY_NAME} is an India-based technology and skilling company operating from Maharashtra and Odisha. We offer software development training,
               cohort-based learning experiences, practical AI skilling, and related digital services.
             </p>
             <p>
